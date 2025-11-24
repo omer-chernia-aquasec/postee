@@ -57,7 +57,9 @@ func (email *EmailAction) Terminate() error {
 }
 
 func (email *EmailAction) GetLayoutProvider() layout.LayoutProvider {
-	return new(formatting.HtmlProvider)
+	return &formatting.OutlookHtmlProvider{
+		HtmlProvider: new(formatting.HtmlProvider),
+	}
 }
 
 func (email *EmailAction) Send(content map[string]string) error {

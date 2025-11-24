@@ -178,8 +178,7 @@ vln_list(severity) = vlnrb {
 	vlnrb := [r |
                     item := input.resources[i]
 
-
-                    resource := item.resource
+                    resource = with_default(item, "resource", {})
                     vlnname := item.vulnerabilities[j].name
                     fxvrsn := with_default(item.vulnerabilities[j],"fix_version", "none")
                     resource_name = with_default(resource, "name", "none")
