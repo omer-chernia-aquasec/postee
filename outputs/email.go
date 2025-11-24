@@ -137,7 +137,9 @@ func (email *EmailOutput) Terminate() error {
 }
 
 func (email *EmailOutput) GetLayoutProvider() layout.LayoutProvider {
-	return new(formatting.HtmlProvider)
+	return &formatting.OutlookHtmlProvider{
+		HtmlProvider: new(formatting.HtmlProvider),
+	}
 }
 
 func (email *EmailOutput) Send(content map[string]string) (data.OutputResponse, error) {
