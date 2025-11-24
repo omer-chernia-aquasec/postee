@@ -108,7 +108,12 @@ render_table(headers, content_array) = s {
 
 ## why I added it?
 to_cell(txt) = c {
-    c:= sprintf(cell_tpl, [txt])
+    txt == ""
+    c := sprintf(cell_tpl, ["&nbsp;"])
+}
+to_cell(txt) = c {
+    txt != ""
+    c := sprintf(cell_tpl, [txt])
 }
 
 

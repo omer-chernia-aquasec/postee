@@ -82,7 +82,12 @@ render_table(headers, content_array, column_width) = s {
 }
 
 to_cell(txt, column_width) = c {
-    c:= sprintf(cell_tpl, [column_width, txt])
+    txt == ""
+    c := sprintf(cell_tpl, [column_width, "&nbsp;"])
+}
+to_cell(txt, column_width) = c {
+    txt != ""
+    c := sprintf(cell_tpl, [column_width, txt])
 }
 
 to_colored_text(color, txt) = spn {
