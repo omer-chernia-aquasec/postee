@@ -50,17 +50,13 @@ tpl := `
   <div class="container">
     <div class="section-container">
       <div class="vulnerabilities-summary form-header">Vulnerabilities summary</div>
-      <table border="0" cellpadding="0" cellspacing="0" style="width:100%%; margin: 0;">
+      <table border="0" cellpadding="0" cellspacing="0" style="width:100%%; margin: 0; border-collapse:separate; border-spacing:5px;">
         <tr>
-          <td align="center" valign="middle" width="135" height="95" bgcolor="#bb0505" style="background-color:#bb0505; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; mso-line-height-rule:exactly; line-height:95px;">%d</td>
-          <td width="5">&nbsp;</td>
-          <td align="center" valign="middle" width="135" height="95" bgcolor="#ff0036" style="background-color:#ff0036; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; mso-line-height-rule:exactly; line-height:95px;">%d</td>
-          <td width="5">&nbsp;</td>
-          <td align="center" valign="middle" width="135" height="95" bgcolor="#ff8e50" style="background-color:#ff8e50; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; mso-line-height-rule:exactly; line-height:95px;">%d</td>
-          <td width="5">&nbsp;</td>
-          <td align="center" valign="middle" width="135" height="95" bgcolor="#ffbf50" style="background-color:#ffbf50; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; mso-line-height-rule:exactly; line-height:95px;">%d</td>
-          <td width="5">&nbsp;</td>
-          <td align="center" valign="middle" width="135" height="95" bgcolor="#a9e4f0" style="background-color:#a9e4f0; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; mso-line-height-rule:exactly; line-height:95px;">%d</td>
+          <td align="center" valign="middle" width="135" height="95" bgcolor="#bb0505" style="background-color:#bb0505; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; padding:35px 10px;">%d</td>
+          <td align="center" valign="middle" width="135" height="95" bgcolor="#ff0036" style="background-color:#ff0036; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; padding:35px 10px;">%d</td>
+          <td align="center" valign="middle" width="135" height="95" bgcolor="#ff8e50" style="background-color:#ff8e50; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; padding:35px 10px;">%d</td>
+          <td align="center" valign="middle" width="135" height="95" bgcolor="#ffbf50" style="background-color:#ffbf50; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; padding:35px 10px;">%d</td>
+          <td align="center" valign="middle" width="135" height="95" bgcolor="#a9e4f0" style="background-color:#a9e4f0; border-radius:4px; color:#ffffff; font-family:'Poppins-Medium', Arial, sans-serif; font-size:28px; font-weight:500; padding:35px 10px;">%d</td>
         </tr>
       </table>
     </div>
