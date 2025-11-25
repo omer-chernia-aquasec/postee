@@ -50,13 +50,19 @@ tpl := `
   <div class="container">
     <div class="section-container">
       <div class="vulnerabilities-summary form-header">Vulnerabilities summary</div>
-      <div class="vulnerabilities-summary-content">
-        <div class="vulnerability-rectangle critical">%d</div>
-        <div class="vulnerability-rectangle high">%d</div>
-        <div class="vulnerability-rectangle medium">%d</div>
-        <div class="vulnerability-rectangle low">%d</div>
-        <div class="vulnerability-rectangle negligible">%d</div>
-      </div>
+      <table border="0" cellpadding="0" cellspacing="0" style="width:100%%; margin: 0;">
+        <tr>
+          <td align="center" valign="middle" style="background-color:#bb0505; border-radius:4px; width:135px; height:95px; color:#ffffff; font-family:Arial, sans-serif; font-size:28px; font-weight:500; padding:10px;">%d</td>
+          <td style="width:5px;"></td>
+          <td align="center" valign="middle" style="background-color:#ff0036; border-radius:4px; width:135px; height:95px; color:#ffffff; font-family:Arial, sans-serif; font-size:28px; font-weight:500; padding:10px;">%d</td>
+          <td style="width:5px;"></td>
+          <td align="center" valign="middle" style="background-color:#ff8e50; border-radius:4px; width:135px; height:95px; color:#ffffff; font-family:Arial, sans-serif; font-size:28px; font-weight:500; padding:10px;">%d</td>
+          <td style="width:5px;"></td>
+          <td align="center" valign="middle" style="background-color:#ffbf50; border-radius:4px; width:135px; height:95px; color:#ffffff; font-family:Arial, sans-serif; font-size:28px; font-weight:500; padding:10px;">%d</td>
+          <td style="width:5px;"></td>
+          <td align="center" valign="middle" style="background-color:#a9e4f0; border-radius:4px; width:135px; height:95px; color:#ffffff; font-family:Arial, sans-serif; font-size:28px; font-weight:500; padding:10px;">%d</td>
+        </tr>
+      </table>
     </div>
     <div class="section-container">
       <div class="assurance-controls form-header">Assurance controls</div>
@@ -126,51 +132,15 @@ style:=`
      }
      .logo-container {
       width:100%;
-      display: flex;
-      justify-content: center;
+      text-align: center;
      }
      .aqua-logo {
       margin: 50px;
       width: 123px;
       height: 35px;
     }
-    .vulnerabilities-summary-content {
-      display: flex;
-    }
-    .vulnerability-rectangle {
-      border-radius: 4px;
-      width: 135px;
-      height: 95px;
-      margin: 5px;
-      color: #ffffff;
-      font-family: "Poppins-Medium", sans-serif;
-      font-size: 28px;
-      font-weight: 500;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .critical {
-      background: #bb0505;
-    }
-    .high {
-      background: #ff0036;
-    }
-    .medium {
-      background: #ff8e50;
-    }
-    .low {
-      background: #ffbf50;
-    }
-    .negligible {
-      background: #a9e4f0;
-    }
+    /* Vulnerability summary styles - using table layout for Outlook Classic compatibility */
     .content {
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      align-items: flex-start;
-      justify-content: flex-start;
       width: 72px;
       position: absolute;
       left: 76px;
@@ -242,17 +212,18 @@ style:=`
       justify-content: center;
     }
     .properties-container {
-      display: flex;
-      flex-direction: column;
+      width: 100%;
     }
     .properties-row {
       width: 723px;
-      display: flex;
-      justify-content: space-between;
       border-bottom: 1px solid #f3f5f9;
       padding: 5px;
       padding-bottom: 8px;
       padding-top: 8px;
+    }
+    .properties-cell {
+      display: inline-block;
+      vertical-align: top;
     }
     .table-cell {
       border-bottom: 1px solid #f3f5f9;
